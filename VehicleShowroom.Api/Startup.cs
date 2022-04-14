@@ -38,6 +38,7 @@ namespace VehicleShowroom.Api
             services.AddScoped < IVehiclesRepository,VehicleRepository >();
             services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddScoped<IDealersRepository, DealerRepository>();
+            services.AddScoped<IShowroomsRepository, ShowroomRepository>();
 
 
             services.AddSwaggerGen(c =>
