@@ -82,10 +82,5 @@ namespace VehicleShowroom.Api.Repositories
             await _context.SaveChangesAsync();
             return true;
         }
-
-        public Task<IList<Customer>> GetMovieByPinCode(int pincode)
-        {
-            throw new System.NotImplementedException();
-        }
     }
 }

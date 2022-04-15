@@ -6,6 +6,6 @@ namespace VehicleShowroom.Api.Interfaces
 {
     public interface ICustomerRepository : IGenericRepository<Customer>
     {
-        Task<IList<Customer>> GetMovieByPinCode(int pincode);
+        
     }
 }
