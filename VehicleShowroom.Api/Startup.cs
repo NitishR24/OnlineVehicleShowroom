@@ -30,6 +30,7 @@ namespace VehicleShowroom.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
 
             services.AddControllers();
             services.AddDbContext<OnlineVehicleShowroomContext>(o => o.UseSqlServer(Configuration.GetConnectionString("OnlineVehicleShowroomConn")));
@@ -58,6 +59,11 @@ namespace VehicleShowroom.Api
             }
 
             app.UseHttpsRedirection();
+
+            app.UseCors(builder =>
+            {
+                builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+            });
 
             app.UseRouting();
 
